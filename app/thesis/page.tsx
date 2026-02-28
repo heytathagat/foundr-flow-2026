@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
@@ -14,6 +14,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+
+export const metadata: Metadata = {
+  title: 'Studio thesis · Foundr Flow',
+  description:
+    'How Foundr Flow, founded by Tathagat Kumar, works as a venture studio and early-stage investor for Tier 2 & Tier 3 founders.',
+}
 
 export default function ThesisPage() {
   return (

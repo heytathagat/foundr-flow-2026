@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { Kicker, Lead, Section } from '@/components/site/section'
@@ -5,6 +7,12 @@ import { portfolio } from '@/lib/site-data'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+
+export const metadata: Metadata = {
+  title: 'Portfolio · Foundr Flow',
+  description:
+    'Portfolio of companies co-built in the Foundr Flow studio with Tier 2 & Tier 3 founders in India.',
+}
 
 export default function PortfolioPage() {
   const sectors = Array.from(new Set(portfolio.map((c) => c.sector))).sort()

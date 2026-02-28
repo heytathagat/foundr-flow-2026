@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
@@ -7,6 +7,12 @@ import { partners } from '@/lib/site-data'
 import { Button } from '@/components/ui/button'
 import { PartnerLogo } from '@/components/site/partner-logo'
 import { Separator } from '@/components/ui/separator'
+
+export const metadata: Metadata = {
+  title: 'Partners · Foundr Flow',
+  description:
+    'Campus, capital, and ecosystem partners working with Foundr Flow, led by founder Tathagat Kumar, to support Tier 2 & Tier 3 founders.',
+}
 
 export default function PartnersPage() {
   return (

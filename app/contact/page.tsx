@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
@@ -5,6 +7,12 @@ import { site } from '@/lib/site-data'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { ContactForm } from '@/components/site/contact-form'
+
+export const metadata: Metadata = {
+  title: 'Contact · Foundr Flow',
+  description:
+    'Apply to Foundr Flow or contact founder Tathagat Kumar and the studio team about Tier 2 & Tier 3 founder support.',
+}
 
 export default function ContactPage() {
   return (

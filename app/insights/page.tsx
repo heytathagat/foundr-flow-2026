@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { Kicker, Lead, Section } from '@/components/site/section'
@@ -7,6 +7,12 @@ import { insights } from '@/lib/site-data'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+
+export const metadata: Metadata = {
+  title: 'Insights · Foundr Flow',
+  description:
+    'Short, practical writing from the Foundr Flow studio, led by founder Tathagat Kumar, on Tier 2 & Tier 3 founders, distribution, and fundraising.',
+}
 
 export default function InsightsPage() {
   return (

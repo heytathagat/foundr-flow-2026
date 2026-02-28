@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
 import { focusAreas, insights, partners, portfolio, site, team } from '@/lib/site-data'
@@ -8,6 +8,12 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { PartnerLogo } from '@/components/site/partner-logo'
+
+export const metadata: Metadata = {
+  title: 'Venture studio for Tier 2 & 3 founders',
+  description:
+    'Foundr Flow, founded by Tathagat Kumar, is a venture studio and early-stage investor co-building with Tier 2 & Tier 3 founders in India.',
+}
 
 export default function Home() {
   const featuredPortfolio = portfolio.slice(0, 3)

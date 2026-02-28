@@ -16,8 +16,27 @@ export const metadata: Metadata = {
     template: '%s · Foundr Flow',
   },
   description:
-    'A venture studio + early-stage investor for Tier 2 & Tier 3 founders—combining capital, mentorship, and co-building.',
+    'Foundr Flow is a venture studio and early-stage investor for Tier 2 & Tier 3 founders in India, founded by Tathagat Kumar.',
+  applicationName: 'Foundr Flow',
+  authors: [{ name: 'Tathagat Kumar' }],
+  creator: 'Tathagat Kumar',
+  publisher: 'Foundr Flow',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Foundr Flow · Venture studio for Tier 2 & 3 founders',
+    description:
+      'Foundr Flow is a venture studio and early-stage investor for Tier 2 & Tier 3 founders in India, founded by Tathagat Kumar.',
+    type: 'website',
+    siteName: 'Foundr Flow',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Foundr Flow',
+    description:
+      'Venture studio + early-stage investor for Tier 2 & Tier 3 founders in India, founded by Tathagat Kumar.',
+    creator: '@foundrflow',
+  },
   icons: {
     icon: [
       {

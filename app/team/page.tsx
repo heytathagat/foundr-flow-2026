@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { PageHeader } from '@/components/site/page-header'
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
@@ -5,6 +7,12 @@ import { team } from '@/lib/site-data'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+
+export const metadata: Metadata = {
+  title: 'Team · Foundr Flow',
+  description:
+    'Meet Tathagat Kumar, Founder of Foundr Flow, and the studio team backing Tier 2 & Tier 3 founders.',
+}
 
 export default function TeamPage() {
   return (
