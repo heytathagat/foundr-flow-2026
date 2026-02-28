@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Container } from '@/components/site/container'
 import { H2, Kicker, Lead, Section } from '@/components/site/section'
-import { focusAreas, insights, partners, portfolio, site, team } from '@/lib/site-data'
+import { focusAreas, insights, partners, portfolio, site } from '@/lib/site-data'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const featuredPortfolio = portfolio.slice(0, 3)
-  const featuredTeam = team.slice(0, 2)
   const featuredInsights = insights.slice(0, 3)
   const featuredPartners = [
     ...partners.colleges.slice(0, 2),
@@ -164,55 +163,6 @@ export default function Home() {
           <div className="mt-8 sm:hidden">
             <Button asChild variant="outline" className="w-full">
               <Link href="/portfolio">View all</Link>
-            </Button>
-          </div>
-        </Container>
-      </Section>
-
-      <Separator />
-
-      <Section>
-        <Container>
-          <div className="flex items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <Kicker>Team</Kicker>
-              <H2 className="mt-4">Builders, not just advisors.</H2>
-              <Lead className="mt-5">
-                We sit inside the mess with you—customer calls, decks, funnels, and hiring
-                decisions.
-              </Lead>
-            </div>
-            <Button asChild variant="outline" className="hidden sm:inline-flex">
-              <Link href="/team">Meet the team</Link>
-            </Button>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredTeam.map((m) => (
-              <Card key={m.name} className="shadow-none">
-                <CardHeader className="pb-4">
-                  <CardTitle className="font-light">{m.name}</CardTitle>
-                  <CardDescription className="font-light">{m.role}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm font-light text-foreground/70 leading-relaxed">
-                    {m.bio}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {m.focus.map((t) => (
-                      <Badge key={t} variant="outline" className="font-light">
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 sm:hidden">
-            <Button asChild variant="outline" className="w-full">
-              <Link href="/team">Meet the team</Link>
             </Button>
           </div>
         </Container>
