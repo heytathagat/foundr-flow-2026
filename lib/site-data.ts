@@ -29,11 +29,12 @@ export type PartnersData = {
 
 export const partners: PartnersData = {
   colleges: [
-    { name: 'Amity University Rajasthan', logo: '/partners/placeholder.svg', url: 'https://amity.edu' },
-    { name: 'Thapar Institute of Engineering & Technology', logo: '/partners/placeholder.svg', url: 'https://thapar.edu' },
-    { name: 'NIT Kurukshetra', logo: '/partners/placeholder.svg', url: 'https://nitkkr.ac.in' },
-    { name: 'IIT Delhi', logo: '/partners/placeholder.svg', url: 'https://home.iitd.ac.in' },
-    { name: 'Amity Innovation Incubator Jaipur', logo: '/partners/placeholder.svg' },
+    { name: 'CGC University', logo: '/partners/campus-cgc-university-nobg.png' },
+    { name: 'IIT Delhi', logo: '/partners/campus-iit-delhi-nobg.png', url: 'https://home.iitd.ac.in' },
+    { name: 'IILM University, Gurugram', logo: '/partners/campus-iilm-gurugram-nobg.png' },
+    { name: 'SGT University', logo: '/partners/campus-sgt-university-nobg.png' },
+    { name: 'Amity University', logo: '/partners/campus-amity-university-nobg.png', url: 'https://amity.edu' },
+    { name: 'Baba Farid Group of Institutions', logo: '/partners/campus-baba-farid-nobg.png' },
   ],
   investmentPartners: [
     { name: 'ah! ventures', logo: '/partners/ah-ventures-nobg.png', url: 'https://ahventures.in' },

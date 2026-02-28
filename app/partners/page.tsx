@@ -37,6 +37,10 @@ export default function PartnersPage() {
               <PartnerLogo key={partner.name} partner={partner} />
             ))}
           </div>
+
+          <p className="mt-6 text-sm font-light text-foreground/60">
+            More 50+ colleges
+          </p>
         </Container>
       </Section>
 
