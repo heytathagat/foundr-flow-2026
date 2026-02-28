@@ -151,7 +151,7 @@ export type TeamMember = {
 export const team: TeamMember[] = [
   {
     name: 'Tathagat Kumar',
-    role: 'Studio Lead',
+    role: 'Founder & CEO',
     bio: 'Founder-operator and ecosystem builder. Lives inside Tier 2/3 founder journeys—events, mentorship, and co-building across campuses and underdog cities.',
     focus: ['Community', 'Narrative', 'Mentorship', 'Founder support'],
   },
