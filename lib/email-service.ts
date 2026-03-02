@@ -2,10 +2,12 @@ import nodemailer from 'nodemailer'
 import { site } from './site-data'
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.zoho.in',
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: 'hello@foundrflow.in',
+    pass: 'uCQzKZkDDF4S',
   },
 })
 
@@ -16,9 +18,15 @@ export async function sendContactEmail(formData: {
   message: string
 }) {
   try {
+    // Debug environment variables
+    console.log('Email Service Debug:')
+    console.log('Using hardcoded credentials for testing')
+    console.log('EMAIL_USER: hello@foundrflow.in')
+    console.log('EMAIL_PASS: ***SET***')
+
     // Email to admin
     const adminEmail = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: 'hello@foundrflow.in',
       to: site.email,
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
@@ -39,7 +47,7 @@ export async function sendContactEmail(formData: {
 
     // Confirmation email to user
     const userEmail = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: 'hello@foundrflow.in',
       to: formData.email,
       subject: 'Thank you for contacting Foundr Flow',
       html: `

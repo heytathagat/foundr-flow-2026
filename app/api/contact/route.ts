@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { submitToGoogleForm } from '@/lib/google-forms'
 import { sendContactEmail } from '@/lib/email-service'
-import { saveSubmissionLocally } from '@/lib/form-storage'
+import { saveSubmission } from '@/lib/form-storage'
 
 const schema = z.object({
   name: z.string().min(2, 'Please enter your name.'),
@@ -24,8 +24,8 @@ export async function POST(req: Request) {
     const formData = parsed.data
     const timestamp = new Date().toISOString()
 
-    // Save locally as backup
-    const localSave = await saveSubmissionLocally({
+    // Save to storage (Google Sheets primary, local fallback)
+    const storageResult = await saveSubmission({
       ...formData,
       timestamp
     })
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     // Try to send email
     const emailResult = await sendContactEmail(formData)
 
-    // Try to submit to Google Forms/Sheets
+    // Try to submit to Google Forms (backup)
     const googleResult = await submitToGoogleForm({
       ...formData,
       timestamp
@@ -41,9 +41,9 @@ export async function POST(req: Request) {
 
     // Log results for debugging
     console.log('Form submission results:', {
-      localSave,
-      emailResult,
-      googleResult,
+      storage: storageResult,
+      email: emailResult,
+      google: googleResult,
       formData: {
         name: formData.name,
         email: formData.email,
@@ -52,18 +52,19 @@ export async function POST(req: Request) {
       }
     })
 
-    // Return success if local save worked (email and Google Forms are optional)
-    if (localSave.success) {
+    // Return success if storage worked (email and Google Forms are optional)
+    if (storageResult.success) {
       return Response.json({ 
         success: true,
-        message: 'Form submitted successfully! We\'ll get back to you soon.'
+        message: 'Form submitted successfully! We\'ll get back to you soon.',
+        storage: storageResult.storage
       })
     } else {
       return Response.json(
         { 
           error: 'Failed to submit form. Please try again or email us directly.',
           details: {
-            local: localSave.error,
+            storage: storageResult.success ? undefined : (storageResult as any).error,
             email: emailResult.error,
             google: googleResult.error
           }

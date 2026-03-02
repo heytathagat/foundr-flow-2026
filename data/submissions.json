@@ -52,5 +52,113 @@
     "timestamp": "2026-03-02T19:01:18.437Z",
     "id": "1772478078437",
     "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "test@example.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify if email functionality is working with the current configuration.",
+    "timestamp": "2026-03-02T19:11:31.195Z",
+    "id": "1772478691196",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "test@example.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify if email functionality is working with the current configuration.",
+    "timestamp": "2026-03-02T19:12:34.428Z",
+    "id": "1772478754428",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:13:40.358Z",
+    "id": "1772478820358",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:16:23.386Z",
+    "id": "1772478983387",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:17:11.150Z",
+    "id": "1772479031150",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:18:45.595Z",
+    "id": "1772479125595",
+    "status": "pending"
+  },
+  {
+    "name": "Env Test User",
+    "email": "test@example.com",
+    "company": "Env Test",
+    "message": "Testing if environment variables are loaded correctly in Next.js",
+    "timestamp": "2026-03-02T19:19:12.089Z",
+    "id": "1772479152089",
+    "status": "pending"
+  },
+  {
+    "name": "Env Test User",
+    "email": "test@example.com",
+    "company": "Env Test",
+    "message": "Testing if environment variables are loaded correctly in Next.js",
+    "timestamp": "2026-03-02T19:19:54.992Z",
+    "id": "1772479194993",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:21:30.769Z",
+    "id": "1772479290770",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:24:20.485Z",
+    "id": "1772479460486",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:36:43.232Z",
+    "id": "1772480203234",
+    "status": "pending"
+  },
+  {
+    "name": "Email Test User",
+    "email": "heytathagat@gmail.com",
+    "company": "Email Test Company",
+    "message": "This is a test to verify email functionality is working. If you receive this email at foundrflowindia@gmail.com, the system is working perfectly!",
+    "timestamp": "2026-03-02T19:40:53.924Z",
+    "id": "1772480453926",
+    "status": "pending"
   }
 ]

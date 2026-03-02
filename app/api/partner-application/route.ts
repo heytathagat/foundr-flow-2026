@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { submitToGoogleForm } from '@/lib/google-forms'
 import { sendContactEmail } from '@/lib/email-service'
-import { saveSubmissionLocally } from '@/lib/form-storage'
+import { saveSubmission } from '@/lib/form-storage'
 
 const schema = z.object({
   organization: z.string().min(2, 'Please enter your organization name.'),
@@ -53,8 +53,8 @@ ${formData.targetAudience}
       timestamp
     }
 
-    // Save locally as backup
-    const localSave = await saveSubmissionLocally(googleFormData)
+    // Save to storage (Google Sheets primary, local fallback)
+    const storageResult = await saveSubmission(googleFormData)
 
     // Send email notification
     const emailResult = await sendContactEmail({
@@ -63,30 +63,31 @@ ${formData.targetAudience}
       company: formData.organization
     })
 
-    // Try to submit to Google Forms/Sheets
+    // Try to submit to Google Forms (backup)
     const googleResult = await submitToGoogleForm(googleFormData)
 
     // Log results for debugging
     console.log('Partner application results:', {
-      localSave,
-      emailResult,
-      googleResult,
+      storage: storageResult,
+      email: emailResult,
+      google: googleResult,
       organization: formData.organization,
       partnershipType: formData.partnershipType
     })
 
-    // Return success if local save worked (email and Google Forms are optional)
-    if (localSave.success) {
+    // Return success if storage worked (email and Google Forms are optional)
+    if (storageResult.success) {
       return Response.json({ 
         success: true,
-        message: 'Partner application submitted successfully! We\'ll review it and get back to you soon.'
+        message: 'Partner application submitted successfully! We\'ll review it and get back to you soon.',
+        storage: storageResult.storage
       })
     } else {
       return Response.json(
         { 
           error: 'Failed to submit application. Please try again or email us directly.',
           details: {
-            local: localSave.error,
+            storage: storageResult.success ? undefined : (storageResult as any).error,
             email: emailResult.error,
             google: googleResult.error
           }

@@ -21,21 +21,52 @@ export const metadata: Metadata = {
   authors: [{ name: 'Tathagat Kumar' }],
   creator: 'Tathagat Kumar',
   publisher: 'Foundr Flow',
-  generator: 'v0.app',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://foundrflow.in'),
+  alternates: {
+    canonical: new URL('https://foundrflow.in'),
+  },
   openGraph: {
-    title: 'Foundr Flow · Venture studio for Tier 2 & 3 founders',
-    description:
-      'Foundr Flow is a venture studio and early-stage investor for Tier 2 & Tier 3 founders in India, founded by Tathagat Kumar.',
     type: 'website',
+    locale: 'en_US',
+    url: 'https://foundrflow.in',
+    title: 'Foundr Flow - Venture Studio for Tier 2 & Tier 3 Founders',
+    description: 'Foundr Flow is a venture studio and early-stage investor dedicated to co-building products, distribution, and momentum for Tier 2 and Tier 3 founders from day zero.',
     siteName: 'Foundr Flow',
-    locale: 'en_IN',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Foundr Flow - Venture Studio for Tier 2 & Tier 3 Founders',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Foundr Flow',
-    description:
-      'Venture studio + early-stage investor for Tier 2 & Tier 3 founders in India, founded by Tathagat Kumar.',
+    title: 'Foundr Flow - Venture Studio for Tier 2 & Tier 3 Founders',
+    description: 'Foundr Flow is a venture studio and early-stage investor dedicated to co-building products, distribution, and momentum for Tier 2 and Tier 3 founders from day zero.',
+    images: {
+      url: '/og-image.jpg',
+      alt: 'Foundr Flow - Venture Studio for Tier 2 & Tier 3 Founders',
+    },
     creator: '@foundrflow',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
   },
   icons: {
     icon: [
