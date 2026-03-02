@@ -15,6 +15,7 @@ export const nav: NavItem[] = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Foundr X', href: '/foundr-x' },
   { label: 'Partners', href: '/partners' },
+  { label: 'Partner Application', href: '/partner-application' },
   { label: 'Insights', href: '/insights' },
   { label: 'Contact', href: '/contact' },
 ]

@@ -105,6 +105,12 @@ export default function PartnersPage() {
           <p className="mt-6 text-sm font-light text-foreground/60">
             30+ partners
           </p>
+          
+          <div className="mt-6">
+            <Button asChild>
+              <Link href="/partner-application">Apply to Become a Partner</Link>
+            </Button>
+          </div>
         </Container>
       </Section>
     </div>
