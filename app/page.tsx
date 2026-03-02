@@ -87,6 +87,41 @@ export default function Home() {
         </Container>
       </Section>
 
+      <Section>
+        <Container>
+          <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-background/60 px-6 py-8 sm:px-8 sm:py-10">
+            <div className="max-w-3xl">
+              <Kicker>India Tour — Coming Soon</Kicker>
+              <Link href="/foundr-x">
+                <H2 className="mt-3">Foundr X: 45+ cities, one connected network</H2>
+              </Link>
+              <Lead className="mt-4">
+                Foundr X is a business networking tour built to connect startup founders,
+                investors, and ecosystem partners across 45+ cities. Each edition features
+                keynote sessions, panel discussions, live pitch opportunities, and curated
+                networking — creating high-value connections that help startups grow faster
+                and smarter.
+              </Lead>
+
+              <p className="mt-4 text-sm text-foreground/70">
+                By expanding into 45+ cities, Foundr X strengthens local ecosystems,
+                spotlights emerging innovation hubs, and builds a connected network of
+                founders and investors across regions.
+              </p>
+
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <Button asChild>
+                  <Link href="/contact">Apply to pitch</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/contact">Partner / Sponsor</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       <Separator />
 
       <Section>

@@ -39,6 +39,9 @@ export function SiteFooter() {
                 <Link className="hover:text-foreground transition-colors" href="/portfolio">
                   Portfolio
                 </Link>
+                <Link className="hover:text-foreground transition-colors" href="/foundr-x">
+                  Foundr X
+                </Link>
                 <Link className="hover:text-foreground transition-colors" href="/partners">
                   Partners
                 </Link>

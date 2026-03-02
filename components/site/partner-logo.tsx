@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import * as React from 'react'
 
@@ -12,6 +14,8 @@ export function PartnerLogo({
   partner: Partner
   className?: string
 }) {
+  const [imgError, setImgError] = React.useState(false)
+
   const content = (
     <div
       className={cn(
@@ -19,14 +23,21 @@ export function PartnerLogo({
         className,
       )}
     >
-      <Image
-        src={partner.logo}
-        alt={partner.name}
-        width={140}
-        height={56}
-        className="max-h-12 w-auto object-contain grayscale opacity-80 transition-all group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.08]"
-        unoptimized
-      />
+      {!imgError ? (
+        <Image
+          src={partner.logo}
+          alt={partner.name}
+          width={140}
+          height={56}
+          onError={() => setImgError(true)}
+          className="max-h-12 w-auto object-contain grayscale opacity-80 transition-all group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.08]"
+          unoptimized
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center">
+          <span className="text-sm font-light text-foreground/80">{partner.name}</span>
+        </div>
+      )}
     </div>
   )
 

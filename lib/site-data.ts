@@ -13,6 +13,7 @@ export type NavItem = { label: string; href: string }
 export const nav: NavItem[] = [
   { label: 'Thesis', href: '/thesis' },
   { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Foundr X', href: '/foundr-x' },
   { label: 'Partners', href: '/partners' },
   { label: 'Insights', href: '/insights' },
   { label: 'Contact', href: '/contact' },
@@ -29,7 +30,6 @@ export type PartnersData = {
 export const partners: PartnersData = {
   colleges: [
     { name: 'CGC University', logo: '/partners/campus-cgc-university-nobg.png' },
-    { name: 'IIT Delhi', logo: '/partners/campus-iit-delhi-nobg.png', url: 'https://home.iitd.ac.in' },
     { name: 'IILM University, Gurugram', logo: '/partners/campus-iilm-gurugram-nobg.png' },
     { name: 'SGT University', logo: '/partners/campus-sgt-university-nobg.png' },
     { name: 'Amity University', logo: '/partners/campus-amity-university-nobg.png', url: 'https://amity.edu' },
@@ -44,11 +44,12 @@ export const partners: PartnersData = {
     { name: 'Venture Catalysts++', logo: '/partners/venture-catalysts-nobg.png', url: 'https://venturecatalysts.in' },
   ],
   relevantPartners: [
-    { name: 'Startup India', logo: '/partners/placeholder.svg', url: 'https://startupindia.gov.in' },
-    { name: 'Google for Startups', logo: '/partners/placeholder.svg', url: 'https://developers.google.com/community' },
-    { name: 'MeitY Startup Hub', logo: '/partners/placeholder.svg', url: 'https://meitystartuphub.in' },
-    { name: 'Startup Punjab', logo: '/partners/placeholder.svg' },
-    { name: 'Microsoft Learn Student Ambassadors', logo: '/partners/placeholder.svg' },
+     { name: 'Draper Startup House', logo: '/partners/draper-startup-house.png', url: 'https://draperstartuphouse.example' },
+     { name: 'eChai', logo: '/partners/echai.png', url: 'https://echai.example' },
+     { name: 'FITT', logo: '/partners/fitt.png', url: 'https://fitt.example' },
+     { name: 'StartupNews', logo: '/partners/startupnews.png', url: 'https://startupnews.example' },
+     { name: 'Visey', logo: '/partners/visey.png' },
+     { name: 'CGC-J Technology Business Incubator Association VentureNest', logo: '/partners/cgc-venturenest.png' },
   ],
 }
 

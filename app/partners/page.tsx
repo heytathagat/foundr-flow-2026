@@ -51,6 +51,8 @@ export default function PartnersPage() {
         </Container>
       </Section>
 
+      
+
       <Separator />
 
       <Section>
@@ -86,7 +88,7 @@ export default function PartnersPage() {
       <Section className="pb-20">
         <Container>
           <div className="max-w-2xl">
-            <Kicker>Relevant Partners</Kicker>
+            <Kicker>Ecosystem partners</Kicker>
             <H2 className="mt-4">Ecosystem enablers.</H2>
             <Lead className="mt-5">
               Government initiatives, accelerators, and programs that help us
@@ -99,6 +101,10 @@ export default function PartnersPage() {
               <PartnerLogo key={partner.name} partner={partner} />
             ))}
           </div>
+
+          <p className="mt-6 text-sm font-light text-foreground/60">
+            30+ partners
+          </p>
         </Container>
       </Section>
     </div>
