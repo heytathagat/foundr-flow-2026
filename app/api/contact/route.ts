@@ -52,19 +52,18 @@ export async function POST(req: Request) {
       }
     })
 
-    // Return success if at least one method worked
-    const success = localSave.success || emailResult.success || googleResult.success
-    
-    if (success) {
+    // Return success if local save worked (email and Google Forms are optional)
+    if (localSave.success) {
       return Response.json({ 
         success: true,
-        message: 'Form submitted successfully!'
+        message: 'Form submitted successfully! We\'ll get back to you soon.'
       })
     } else {
       return Response.json(
         { 
           error: 'Failed to submit form. Please try again or email us directly.',
           details: {
+            local: localSave.error,
             email: emailResult.error,
             google: googleResult.error
           }

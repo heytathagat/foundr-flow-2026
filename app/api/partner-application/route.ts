@@ -75,19 +75,18 @@ ${formData.targetAudience}
       partnershipType: formData.partnershipType
     })
 
-    // Return success if at least one method worked
-    const success = localSave.success || emailResult.success || googleResult.success
-    
-    if (success) {
+    // Return success if local save worked (email and Google Forms are optional)
+    if (localSave.success) {
       return Response.json({ 
         success: true,
-        message: 'Partner application submitted successfully!'
+        message: 'Partner application submitted successfully! We\'ll review it and get back to you soon.'
       })
     } else {
       return Response.json(
         { 
           error: 'Failed to submit application. Please try again or email us directly.',
           details: {
+            local: localSave.error,
             email: emailResult.error,
             google: googleResult.error
           }

@@ -25,8 +25,14 @@ export async function saveSubmissionLocally(formData: {
     
     // Read existing submissions
     if (fs.existsSync(SUBMISSIONS_FILE)) {
-      const data = fs.readFileSync(SUBMISSIONS_FILE, 'utf-8')
-      submissions = JSON.parse(data)
+      try {
+        const data = fs.readFileSync(SUBMISSIONS_FILE, 'utf8')
+        submissions = JSON.parse(data)
+      } catch (parseError) {
+        // If file is corrupted, start fresh
+        console.log('Submissions file corrupted, starting fresh')
+        submissions = []
+      }
     }
     
     // Add new submission
@@ -36,8 +42,8 @@ export async function saveSubmissionLocally(formData: {
       status: 'pending'
     })
     
-    // Save back to file
-    fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2))
+    // Save back to file with proper encoding
+    fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8')
     
     return { success: true }
   } catch (error) {
@@ -52,7 +58,7 @@ export async function getSubmissions() {
       return []
     }
     
-    const data = fs.readFileSync(SUBMISSIONS_FILE, 'utf-8')
+    const data = fs.readFileSync(SUBMISSIONS_FILE, 'utf8')
     return JSON.parse(data)
   } catch (error) {
     console.error('Error reading submissions:', error)
@@ -67,7 +73,7 @@ export async function updateSubmissionStatus(id: string, status: string) {
     
     if (submission) {
       submission.status = status
-      fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2))
+      fs.writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2), 'utf8')
       return { success: true }
     }
     

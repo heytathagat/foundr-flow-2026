@@ -3,7 +3,7 @@ export const site = {
   description:
     'A venture studio + early-stage investor for Tier 2 & Tier 3 founders—co-building products, distribution, and momentum from day zero.',
   location: 'Gurugram, Haryana, India · Built for Tier 2 & 3',
-  email: 'hello@foundrflow.in',
+  email: 'foundrflowindia@gmail.com',
   linkedin: 'https://linkedin.com/company/foundrflow',
   x: 'https://x.com/foundrflow',
 } as const
