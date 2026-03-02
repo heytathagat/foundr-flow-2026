@@ -1,0 +1,58 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["sin1"],
+  "env": {
+    "EMAIL_USER": "hello@foundrflow.in",
+    "EMAIL_PASS": "uCQzKZkDDF4S",
+    "GOOGLE_FORM_ID": "1FAIpQLScEkiChfhaLd25TecO4_sOwneShN78Lf3I6_F2xzfGEKKRW-g",
+    "GOOGLE_SHEET_ID": "1QAoB3aNVCy7q9DTcoHFx3DulpgSaRVSDRRLd114OVEw"
+  },
+  "build": {
+    "env": {
+      "EMAIL_USER": "hello@foundrflow.in",
+      "EMAIL_PASS": "uCQzKZkDDF4S",
+      "GOOGLE_FORM_ID": "1FAIpQLScEkiChfhaLd25TecO4_sOwneShN78Lf3I6_F2xzfGEKKRW-g",
+      "GOOGLE_SHEET_ID": "1QAoB3aNVCy7q9DTcoHFx3DulpgSaRVSDRRLd114OVEw"
+    }
+  },
+  "functions": {
+    "app/api/contact/route.ts": {
+      "maxDuration": 30
+    },
+    "app/api/partner-application/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin/:path*",
+      "destination": "/admin/:path*"
+    }
+  ]
+}
