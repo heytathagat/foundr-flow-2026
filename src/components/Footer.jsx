@@ -1,11 +1,11 @@
+import Logo from './Logo'
+
 export default function Footer({ onNav }) {
   return (
     <>
       <footer className="footer">
         <div className="footer-brand">
-          <div className="nav-logo" style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>
-            Foundr<span style={{ color: 'var(--red)' }}>Flow</span>
-          </div>
+          <Logo height={36} className="footer-logo" onClick={() => onNav('home')} />
           <p>A venture studio + early-stage investor for Tier 2 & 3 founders — co-building from day zero.</p>
           <small>Registered under Avergent (OPC) Pvt. Ltd.</small>
         </div>
@@ -31,8 +31,8 @@ export default function Footer({ onNav }) {
           <div className="footer-col">
             <h4>Legal</h4>
             <ul>
-              <li>Privacy Policy</li>
-              <li>Terms of Use</li>
+              <li onClick={() => onNav('privacy')}>Privacy Policy</li>
+              <li onClick={() => onNav('terms')}>Terms of Use</li>
             </ul>
           </div>
         </div>

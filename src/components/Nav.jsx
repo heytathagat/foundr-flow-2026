@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Logo from './Logo'
 
 const pages = [
   { id: 'home', label: 'Home' },
@@ -18,23 +19,24 @@ export default function Nav({ current, onNav }) {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  const activePage = current === 'article' ? 'insights' : current
+
   return (
     <nav className="nav">
-      <div className="nav-logo" onClick={() => onNav('home')}>
-        Foundr<span>Flow</span>
-      </div>
+      <Logo height={36} onClick={() => onNav('home')} />
       <div className="nav-links">
-        {pages.map(p => (
+        {pages.map((p) => (
           <button
             key={p.id}
-            className={`nav-btn${current === p.id ? ' active' : ''}`}
+            type="button"
+            className={`nav-btn${activePage === p.id ? ' active' : ''}`}
             onClick={() => onNav(p.id)}
           >
             {p.label}
           </button>
         ))}
-        <button className="nav-btn nav-cta" onClick={() => onNav('contact')}>
-          Apply Now
+        <button type="button" className="nav-btn nav-cta" onClick={() => onNav('contact')}>
+          Contact Us
         </button>
       </div>
     </nav>
