@@ -54,7 +54,7 @@ export default function Insights({ onNav }) {
 
   return (
     <>
-      <section className="section" style={{ paddingTop: '8rem' }}>
+      <section className="section page-top">
         <div className="container">
           <div className="section-head">
             <div className="eyebrow reveal">Insights</div>

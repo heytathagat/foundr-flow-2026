@@ -1,18 +1,33 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Cursor() {
   const dot = useRef(null)
   const ring = useRef(null)
+  const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
-    let mx = 0, my = 0, rx = 0, ry = 0
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)')
+    const update = () => setEnabled(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return undefined
+
+    let mx = 0
+    let my = 0
+    let rx = 0
+    let ry = 0
     let raf
 
     const move = (e) => {
-      mx = e.clientX; my = e.clientY
+      mx = e.clientX
+      my = e.clientY
       if (dot.current) {
-        dot.current.style.left = mx + 'px'
-        dot.current.style.top = my + 'px'
+        dot.current.style.left = `${mx}px`
+        dot.current.style.top = `${my}px`
       }
     }
 
@@ -20,8 +35,8 @@ export default function Cursor() {
       rx += (mx - rx) * 0.14
       ry += (my - ry) * 0.14
       if (ring.current) {
-        ring.current.style.left = rx + 'px'
-        ring.current.style.top = ry + 'px'
+        ring.current.style.left = `${rx}px`
+        ring.current.style.top = `${ry}px`
       }
       raf = requestAnimationFrame(lerp)
     }
@@ -35,8 +50,10 @@ export default function Cursor() {
       ring.current?.classList.remove('expand')
     }
 
+    const interactive = 'button, a, .insight-item, .team-card, .focus-card, .thesis-item, .legal-card, .city-pill'
+
     document.addEventListener('mousemove', move)
-    document.querySelectorAll('button, a, .insight-item, .team-card, .focus-card, .thesis-item').forEach(el => {
+    document.querySelectorAll(interactive).forEach((el) => {
       el.addEventListener('mouseenter', expand)
       el.addEventListener('mouseleave', shrink)
     })
@@ -44,9 +61,15 @@ export default function Cursor() {
     raf = requestAnimationFrame(lerp)
     return () => {
       document.removeEventListener('mousemove', move)
+      document.querySelectorAll(interactive).forEach((el) => {
+        el.removeEventListener('mouseenter', expand)
+        el.removeEventListener('mouseleave', shrink)
+      })
       cancelAnimationFrame(raf)
     }
-  }, [])
+  }, [enabled])
+
+  if (!enabled) return null
 
   return (
     <>

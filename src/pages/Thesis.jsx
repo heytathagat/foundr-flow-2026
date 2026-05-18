@@ -15,7 +15,7 @@ export default function Thesis({ onNav }) {
 
   return (
     <>
-      <section className="section" style={{ paddingTop: '8rem' }}>
+      <section className="section page-top">
         <div className="container">
           <div className="section-head">
             <div className="eyebrow reveal">Our Thesis</div>

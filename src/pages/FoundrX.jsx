@@ -13,7 +13,7 @@ export default function FoundrX({ onNav }) {
 
   return (
     <>
-      <section className="section" style={{ paddingTop: '8rem' }}>
+      <section className="section page-top">
         <div className="container">
           <div className="eyebrow reveal">Coming Soon — 2026 India Tour</div>
 

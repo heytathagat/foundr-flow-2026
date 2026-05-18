@@ -18,7 +18,7 @@ export default function Partners({ onNav }) {
 
   return (
     <>
-      <section className="section" style={{ paddingTop: '8rem' }}>
+      <section className="section page-top">
         <div className="container">
           <div className="section-head">
             <div className="eyebrow reveal">Partners</div>
@@ -49,9 +49,9 @@ export default function Partners({ onNav }) {
             ))}
           </div>
 
-          <div className="inline-cta reveal" style={{ marginTop: '3.5rem', textAlign: 'center' }}>
+          <div className="inline-cta inline-cta--center reveal" style={{ marginTop: '3.5rem' }}>
             <h3>Want to partner with us?</h3>
-            <p style={{ maxWidth: '420px', margin: '0 auto 1.5rem' }}>
+            <p>
               Whether you're an investor, college, or ecosystem enabler — there's a place in the Foundr Flow network.
             </p>
             <button className="btn btn-dark" onClick={() => onNav('contact')}>Partner Application</button>

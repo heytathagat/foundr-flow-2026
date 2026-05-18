@@ -31,7 +31,7 @@ export default function Article({ slug, onNav }) {
   if (!article) {
     return (
       <>
-        <section className="section" style={{ paddingTop: '8rem' }}>
+        <section className="section page-top">
           <div className="container">
             <h1 className="hdline">Article not found</h1>
             <button className="btn btn-outline" type="button" onClick={() => onNav('insights')}>
