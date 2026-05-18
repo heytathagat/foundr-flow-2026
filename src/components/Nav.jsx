@@ -35,7 +35,11 @@ export default function Nav({ current, onNav }) {
             {p.label}
           </button>
         ))}
-        <button type="button" className="nav-btn nav-cta" onClick={() => onNav('contact')}>
+        <button
+          type="button"
+          className={`nav-btn nav-cta${activePage === 'contact' ? ' active' : ''}`}
+          onClick={() => onNav('contact')}
+        >
           Contact Us
         </button>
       </div>

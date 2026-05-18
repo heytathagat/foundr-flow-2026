@@ -342,6 +342,111 @@ export const ARTICLES = {
       },
     ],
   },
+  'operator-investors': {
+    slug: 'operator-investors',
+    date: 'Sep 5, 2025',
+    read: '12 min read',
+    title: 'Why operator-investors build better companies',
+    desc: 'The difference between advice and co-building. How hands-on studio support compounds value in ways passive capital simply cannot match.',
+    tags: ['Studio Model', 'Operations'],
+    sections: [
+      {
+        type: 'p',
+        text: 'Capital without context is just a bank transfer. The investors who change outcomes for early founders are the ones who\'ve shipped products, run sales calls, and fixed broken unit economics — not the ones who only send calendar links and generic intros.',
+      },
+      {
+        type: 'h2',
+        text: 'Advice vs co-building',
+      },
+      {
+        type: 'p',
+        text: 'Advice is cheap because it doesn\'t cost the giver time. "You should focus on enterprise" or "Have you thought about influencers?" — none of it requires skin in the game. Co-building means sitting in the same sprint: rewriting the landing page, pressure-testing pricing, joining a customer call when the founder is stuck.',
+      },
+      {
+        type: 'p',
+        text: 'For Tier 2 and Tier 3 founders, co-building matters even more. They often lack local peer networks of operators who\'ve scaled similar businesses. A studio model fills that gap with people who treat your company like a build, not a bet slip.',
+      },
+      {
+        type: 'h2',
+        text: 'Where operator support compounds',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Product — faster iteration cycles because feedback is specific and immediate.',
+          'Brand — narrative and design that match how your buyers actually talk.',
+          'GTM — distribution loops designed with channel economics, not theory.',
+          'Fundraising — materials built from real operating data, not aspirational slides.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What to look for in a studio partner',
+      },
+      {
+        type: 'p',
+        text: 'Ask how many hours per week you get from operators, not partners. Ask for examples of work product they\'ve shipped with founders — decks don\'t count; live URLs and revenue screenshots do. Ask who owns outcomes when a sprint fails.',
+      },
+      {
+        type: 'p',
+        text: 'Operator-investors aren\'t a luxury for later-stage companies. For underdog founders, they\'re how you compress five years of trial-and-error into eighteen months of deliberate execution.',
+      },
+    ],
+  },
+  'local-networks': {
+    slug: 'local-networks',
+    date: 'Aug 14, 2025',
+    read: '9 min read',
+    title: 'The hidden leverage of local networks in Tier 2 cities',
+    desc: 'Why a founder in Indore or Coimbatore often has stronger early distribution than someone building the same product in Bengaluru.',
+    tags: ['Networks', 'Tier 2'],
+    sections: [
+      {
+        type: 'p',
+        text: 'Founders in smaller cities are often told they need to "move to a hub" to build a startup. That advice ignores the most valuable asset they already have: dense, trust-based local networks that big-city founders spend years and lakhs trying to manufacture.',
+      },
+      {
+        type: 'h2',
+        text: 'Trust density beats audience size',
+      },
+      {
+        type: 'p',
+        text: 'A founder in Indore might know fifty shop owners, twenty college society heads, and three family-business operators who will take a call on WhatsApp. That\'s not a small network — it\'s a high-trust network. Converting one node can unlock an entire corridor.',
+      },
+      {
+        type: 'p',
+        text: 'In Bengaluru, the same founder might have 2,000 LinkedIn connections and zero people who will pilot a half-broken v1 because they actually know them. Audience without trust is just noise.',
+      },
+      {
+        type: 'h2',
+        text: 'Three network types we see work',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Alumni and campus chains — societies, batches, and fest circuits that repeat every year.',
+          'Trade and merchant clusters — jewellers, medical stores, distributors with tight referral loops.',
+          'Creator and community leaders — local influencers whose audience is geographic, not generic.',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Productizing the network without burning it',
+      },
+      {
+        type: 'p',
+        text: 'The mistake is spamming the network before the product works. The right sequence: deliver value to ten people who know you, document what they say, tighten the product, then expand through warm introductions — not cold blasts.',
+      },
+      {
+        type: 'p',
+        text: 'Foundr X exists partly to connect these local nodes into a national graph — so a founder in Coimbatore can eventually reach capital and partners in other cities without abandoning the edge that made them interesting in the first place.',
+      },
+      {
+        type: 'p',
+        text: 'Your city isn\'t a handicap. It\'s a distribution moat — if you treat it like one.',
+      },
+    ],
+  },
 }
 
 export function getArticle(slug) {

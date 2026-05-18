@@ -28,6 +28,7 @@ const INSIGHTS = [
     tags: ['Operations', 'Metrics'],
   },
   {
+    slug: 'operator-investors',
     date: 'Sep 5, 2025',
     read: '12 min read',
     title: 'Why operator-investors build better companies',
@@ -35,6 +36,7 @@ const INSIGHTS = [
     tags: ['Studio Model', 'Operations'],
   },
   {
+    slug: 'local-networks',
     date: 'Aug 14, 2025',
     read: '9 min read',
     title: 'The hidden leverage of local networks in Tier 2 cities',
