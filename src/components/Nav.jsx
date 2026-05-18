@@ -7,7 +7,6 @@ const pages = [
   { id: 'team', label: 'Team' },
   { id: 'partners', label: 'Partners' },
   { id: 'insights', label: 'Insights' },
-  { id: 'contact', label: 'Contact' },
 ]
 
 export default function Nav({ current, onNav }) {
@@ -22,7 +21,7 @@ export default function Nav({ current, onNav }) {
   return (
     <nav className="nav">
       <div className="nav-logo" onClick={() => onNav('home')}>
-        <img src="/foundrflow.jpg.png" alt="Foundr Flow" style={{ height: '2rem' }} />
+        Foundr<span>Flow</span>
       </div>
       <div className="nav-links">
         {pages.map(p => (
@@ -34,6 +33,9 @@ export default function Nav({ current, onNav }) {
             {p.label}
           </button>
         ))}
+        <button className="nav-btn nav-cta" onClick={() => onNav('contact')}>
+          Apply Now
+        </button>
       </div>
     </nav>
   )

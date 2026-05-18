@@ -16,15 +16,6 @@ const FOCUS = [
   { title: 'Brands from Bharat', desc: 'Digital-first brands with unfair go-to-market in Tier 2 & 3 — offline + online done right.' },
 ]
 
-const HOW_WE_HELP = [
-  { title: 'Product Design & Development', desc: 'From wireframes to shipped product — we help you build what users actually want, not what looks good in a pitch deck.' },
-  { title: 'Brand & Positioning', desc: 'Craft your story, visual identity, and market positioning that resonates with your target audience.' },
-  { title: 'Go-to-Market Strategy', desc: 'Distribution channels, pricing, and launch plans that work for Tier 2 & 3 markets, not just metro assumptions.' },
-  { title: 'Fundraising Support', desc: 'Narrative building, deck refinement, and investor introductions — we help you tell your story to the right people.' },
-  { title: 'Network & Community', desc: 'Access to 45+ cities of founders, operators, and mentors who understand building from the ground up.' },
-  { title: 'Operational Guidance', desc: 'Hiring, legal, compliance, and day-to-day operations — practical help for early-stage chaos.' },
-]
-
 export default function Home({ onNav }) {
   useReveal()
 
@@ -97,32 +88,6 @@ export default function Home({ onNav }) {
                 <div className="fc-num">0{i + 1}</div>
                 <div className="fc-title">{f.title}</div>
                 <div className="fc-desc">{f.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <hr className="divider" />
-
-      {/* HOW WE HELP SECTION */}
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
-            <div className="eyebrow reveal">What We Actually Do</div>
-            <h2 className="hdline reveal reveal-delay-1" style={{ fontSize: 'clamp(2rem,4vw,3.5rem)' }}>
-              More than capital.<br /><em>We co-build.</em>
-            </h2>
-            <p className="body-text reveal reveal-delay-2">
-              We don't just write cheques and disappear. Our studio model means hands-on support across product, brand, GTM, and fundraising.
-            </p>
-          </div>
-          <div className="focus-grid">
-            {HOW_WE_HELP.map((h, i) => (
-              <div className={`focus-card reveal reveal-delay-${(i % 4) + 1}`} key={i}>
-                <div className="fc-num">0{i + 1}</div>
-                <div className="fc-title">{h.title}</div>
-                <div className="fc-desc">{h.desc}</div>
               </div>
             ))}
           </div>

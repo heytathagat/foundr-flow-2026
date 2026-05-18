@@ -9,10 +9,8 @@ import Team from './pages/Team'
 import Partners from './pages/Partners'
 import Insights from './pages/Insights'
 import Contact from './pages/Contact'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import TermsOfUse from './pages/TermsOfUse'
 
-const PAGES = { home: Home, thesis: Thesis, foundrx: FoundrX, team: Team, partners: Partners, insights: Insights, contact: Contact, privacy: PrivacyPolicy, terms: TermsOfUse }
+const PAGES = { home: Home, thesis: Thesis, foundrx: FoundrX, team: Team, partners: Partners, insights: Insights, contact: Contact }
 
 export default function App() {
   const [page, setPage] = useState('home')
