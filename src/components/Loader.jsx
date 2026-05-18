@@ -10,7 +10,11 @@ export default function Loader() {
 
   return (
     <div className={`loader${hidden ? ' hidden' : ''}`}>
-      <img src="/foundrflow.jpg" alt="Foundr Flow" className="loader-logo-img" />
+      <img
+        src="/foundrflow-white.svg"
+        alt="Foundr Flow"
+        className="loader-logo-img"
+      />
       <div className="loader-bar-wrap">
         <div className="loader-bar" />
       </div>
