@@ -1,0 +1,21 @@
+{
+  "name": "foundrflow",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "FoundrFlow — venture studio website (React + Vite)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
+  }
+}
