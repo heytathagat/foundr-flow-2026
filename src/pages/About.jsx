@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Eyebrow, CtaBand, PageHead } from '../components/common.jsx';
 import { TEAM, MILESTONES } from '../data/content.js';
 import { useDocumentMeta } from '../hooks/useDocumentMeta.js';
@@ -42,12 +43,23 @@ export default function About() {
           </div>
           <div className="team" data-stagger>
             {TEAM.map((m) => (
-              <div className="member reveal" key={m.name}>
-                <div className="ph"><span>{m.init}</span></div>
+              <Link to={`/team/${m.name.toLowerCase().replace(/\s+/g, '-')}`} className="member reveal" key={m.name}>
+                <div className="ph">
+                  <img 
+                    src={`/${m.photo}`} 
+                    alt={m.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.querySelector('span').style.display = 'block';
+                    }}
+                  />
+                  <span style={{ display: 'none' }}>{m.init}</span>
+                </div>
                 <h3>{m.name}</h3>
                 <div className="role">{m.role}</div>
                 <p>{m.bio}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

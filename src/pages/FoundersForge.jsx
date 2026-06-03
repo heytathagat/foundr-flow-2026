@@ -22,7 +22,7 @@ export default function FoundersForge() {
             <h2 className="section-title">Complete founder transformation</h2>
           </div>
 
-          <div className="program-highlights reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'clamp(20px,3vw,32px)' }}>
+          <div className="program-highlights reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(20px,3vw,32px)' }}>
             <div className="highlight-card" style={{ padding: 'clamp(24px,3vw,32px)', background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: '8px' }}>
               <div className="highlight-icon" style={{ fontSize: '2rem', marginBottom: '16px' }}>🎯</div>
               <h3 style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: '1.15rem', marginBottom: '12px' }}>Application & Screening</h3>
@@ -51,7 +51,7 @@ export default function FoundersForge() {
             <h2 className="section-title">The cohort experience</h2>
           </div>
 
-          <div className="experience-grid reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'clamp(28px,5vw,48px)' }}>
+          <div className="experience-grid reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(28px,5vw,48px)' }}>
             <div className="experience-item">
               <h3 style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: '1.2rem', marginBottom: '16px' }}>Masterclasses & Workshops</h3>
               <p style={{ color: 'var(--ink-2)', fontSize: '1rem', lineHeight: 1.6, margin: 0 }}>Participants attended intensive learning sessions covering startup fundamentals, advanced strategies, and practical execution frameworks.</p>
@@ -89,20 +89,9 @@ export default function FoundersForge() {
 
       <section className="section">
         <div className="wrap">
-          <div className="reveal" style={{ marginTop: 60, padding: '40px', background: 'var(--night)', color: 'var(--night-text)', borderRadius: '8px', textAlign: 'center' }}>
+          <div className="reveal" style={{ marginTop: 60, padding: 'clamp(24px,4vw,40px)', background: 'var(--night)', color: 'var(--night-text)', borderRadius: '8px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--paper)', fontSize: 'clamp(1.5rem,3vw,2rem)' }}>Founders Forge 2.0 was not just a startup program</h3>
             <p style={{ marginTop: 18, color: 'var(--night-text)', fontSize: '1.1rem', maxWidth: '60ch', margin: '18px auto 0' }}>It was a complete founder transformation experience that equipped entrepreneurs with the mindset, network, knowledge, mentorship, and execution capabilities required to build impactful and sustainable companies in today's competitive startup ecosystem.</p>
-          </div>
-
-          <div className="reveal" style={{ marginTop: 60 }}>
-            <h3>Our Esteemed Partners</h3>
-            <div style={{ marginTop: 40, padding: '60px 40px', background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: '12px', textAlign: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 'clamp(60px,10vw,120px)', flexWrap: 'wrap' }}>
-                <img src="/cgc.webp" alt="CGC" style={{ height: 'clamp(60px,8vw,100px)', maxWidth: '200px', objectFit: 'contain' }} />
-                <img src="/venturenest.png" alt="VentureNest" style={{ height: 'clamp(60px,8vw,100px)', maxWidth: '200px', objectFit: 'contain' }} />
-                <img src="/startuppunjab.jpeg" alt="StartupPunjab" style={{ height: 'clamp(60px,8vw,100px)', maxWidth: '200px', objectFit: 'contain' }} />
-              </div>
-            </div>
           </div>
         </div>
       </section>

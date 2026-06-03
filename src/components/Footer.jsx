@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <div className="foot-brand">
-            <img src="/logo-light.png" alt="FoundrFlow" />
+            <img src="/fwfooter.png" alt="FoundrFlow" />
             <p>A venture studio co-building companies with founders from Tier 2 &amp; 3 India — capital, product, brand and distribution from day zero.</p>
             <div className="foot-social">
               <IconLink href="#" label="LinkedIn">
@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/about#team">Team</Link></li>
               <li><Link to="/about#conviction">Manifesto</Link></li>
+              <li><Link to="/partners">Partners</Link></li>
               <li><a href="mailto:careers@foundrflow.in">Careers</a></li>
             </ul>
           </div>

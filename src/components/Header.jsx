@@ -31,11 +31,12 @@ export default function Header() {
     <header className={`site-head${stuck ? ' is-stuck' : ''}`}>
       <div className="wrap head-inner">
         <Link className="brand" to="/" aria-label="FoundrFlow home">
-          <img src="/logo.png" alt="FoundrFlow" />
+          <img src="/fwheader.png" alt="FoundrFlow" />
         </Link>
 
         <nav className={`nav${open ? ' open' : ''}`} aria-label="Primary">
           <div className="nav-links">
+            <NavLink to="/partners">Partners</NavLink>
             {NAV.map((item) => (
               <NavLink key={item.to} to={item.to}>{item.label}</NavLink>
             ))}
@@ -48,7 +49,6 @@ export default function Header() {
               <div className={`dropdown-menu${programsOpen ? ' open' : ''}`}>
                 <Link to="/programs/founders-forge">Founders Forge 2.0</Link>
                 <Link to="/programs/africa-founder">Africa Global Founder Program 2026</Link>
-                <Link to="/programs/raisex-bootcamp">RaiseX Bootcamp</Link>
               </div>
             </div>
           </div>

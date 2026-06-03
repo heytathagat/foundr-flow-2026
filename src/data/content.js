@@ -76,9 +76,27 @@ export const FAQS = [
 ];
 
 export const TEAM = [
-  { name: 'Aarav Mehta', init: 'AM', role: 'Founding Partner', bio: 'Built and sold a logistics startup out of Indore. Spends most of his time with founders, not in board rooms.' },
-  { name: 'Sneha Patil', init: 'SP', role: 'Partner, Product', bio: 'Ex-design lead for two consumer apps. Runs the embedded build teams across the portfolio.' },
-  { name: 'Imran Qureshi', init: 'IQ', role: 'Partner, Capital', bio: 'A decade in early-stage investing. Handles the first cheque and the introductions for the round after.' },
+  { 
+    name: 'Tathagat Kumar', 
+    init: 'TK', 
+    role: 'Founder & Investor', 
+    bio: 'Tathagat Kumar is an investor and venture studio leader focused on backing and scaling high-potential startups across emerging sectors. Through strategic capital, mentorship, and ecosystem partnerships, he helps founders transform early-stage ideas into sustainable businesses.',
+    photo: 'tathagat.jpeg'
+  },
+  { 
+    name: 'Nihit Mehrotra', 
+    init: 'NM', 
+    role: 'CFO', 
+    bio: 'Nihit brings deep financial expertise to help startups navigate the complexities of capital allocation, financial planning, and investor relations. With a focus on building sustainable financial foundations, he ensures that early-stage companies are positioned for long-term growth and scalability.',
+    photo: 'nihit.jpeg'
+  },
+  { 
+    name: 'Nikhil Gupta', 
+    init: 'NG', 
+    role: 'Strategic Advisor', 
+    bio: 'Nikhil Gupta is a Most Admired BFSI Professional (2026) with extensive experience as an investor, startup mentor, and business strategist. As an Alternative Investment Fund Manager and seasoned banker, he brings deep expertise in financial services, investment management, and strategic advisory. A visiting faculty and podcast speaker, Nikhil shares his knowledge through mentorship and thought leadership, helping founders navigate complex financial landscapes and build scalable businesses.',
+    photo: 'nikhil.jpg'
+  },
 ];
 
 export const MILESTONES = [

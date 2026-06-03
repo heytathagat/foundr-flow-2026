@@ -65,7 +65,7 @@ export default function AfricaFounder() {
             <h2 className="section-title">Four weeks of intensive learning</h2>
           </div>
 
-          <div className="experience-grid reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'clamp(28px,5vw,48px)' }}>
+          <div className="experience-grid reveal" style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(28px,5vw,48px)' }}>
             <div className="experience-item">
               <h3 style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: '1.2rem', marginBottom: '16px' }}>Workshops & Masterclasses</h3>
               <p style={{ color: 'var(--ink-2)', fontSize: '1rem', lineHeight: 1.6, margin: 0 }}>Intensive sessions covering startup fundamentals, branding, product development, customer acquisition, sales, and scaling strategies.</p>
@@ -103,16 +103,9 @@ export default function AfricaFounder() {
 
       <section className="section">
         <div className="wrap">
-          <div className="reveal" style={{ marginTop: 60, padding: '40px', background: 'var(--night)', color: 'var(--night-text)', borderRadius: '8px', textAlign: 'center' }}>
+          <div className="reveal" style={{ marginTop: 60, padding: 'clamp(24px,4vw,40px)', background: 'var(--night)', color: 'var(--night-text)', borderRadius: '8px', textAlign: 'center' }}>
             <h3 style={{ color: 'var(--paper)', fontSize: 'clamp(1.5rem,3vw,2rem)' }}>Join the Global Entrepreneurial Community</h3>
             <p style={{ marginTop: 18, color: 'var(--night-text)', fontSize: '1.1rem', maxWidth: '60ch', margin: '18px auto 0' }}>Build meaningful partnerships, exchange ideas with founders from across Africa and beyond, and become part of a network that extends far beyond the program duration.</p>
-          </div>
-
-          <div className="reveal" style={{ marginTop: 60 }}>
-            <h3>Partner Logos</h3>
-            <div style={{ marginTop: 30, padding: '40px', border: '2px dashed var(--line)', borderRadius: '8px', textAlign: 'center', color: 'var(--ink-3)' }}>
-              <p>Partner logos will be displayed here</p>
-            </div>
           </div>
         </div>
       </section>
