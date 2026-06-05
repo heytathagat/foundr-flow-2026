@@ -62,9 +62,6 @@ export default function Partners() {
                 <img src="/valuechampions.png" alt="Partner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <div style={{ width: '100%', maxWidth: '200px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src="/TIE.png" alt="Partner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-              </div>
-              <div style={{ width: '100%', maxWidth: '200px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src="/angelblue.png" alt="Partner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <div style={{ width: '100%', maxWidth: '200px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
