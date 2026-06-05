@@ -21,18 +21,18 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="studio" element={<Studio />} />
-          <Route path="process" element={<Process />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="terms" element={<Terms />} />
-          <Route path="programs/founders-forge" element={<FoundersForge />} />
-          <Route path="programs/africa-founder" element={<AfricaFounder />} />
-          <Route path="partners" element={<Partners />} />
-          <Route path="team/tathagat-kumar" element={<TeamTathagatKumar />} />
-          <Route path="team/nihit-mehrotra" element={<TeamNihitMehrotra />} />
-          <Route path="team/nikhil-gupta" element={<TeamNikhilGupta />} />
+          <Route path="/studio" element={<Studio />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/programs/founders-forge" element={<FoundersForge />} />
+          <Route path="/programs/africa-founder" element={<AfricaFounder />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/team/tathagat-kumar" element={<TeamTathagatKumar />} />
+          <Route path="/team/nihit-mehrotra" element={<TeamNihitMehrotra />} />
+          <Route path="/team/nikhil-gupta" element={<TeamNikhilGupta />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
